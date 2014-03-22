@@ -2,7 +2,11 @@
 
 _Setups the isolated development environment for the D programming language._
 
-Kardan uses the CoreOS platform as the foundation to configure the development environment for the D programming language. The resulting development image is based on Ubuntu 12.04 and contains the latest versions of the D compilers – dmd and ldc –, the dub package manager and many helper utilities.
+Kardan uses the [CoreOS](https://coreos.com/) platform as the foundation to configure the development environment for the D programming language. The resulting development Ubuntu image is built with [Docker](https://www.docker.io/) and contains the latest versions of the D compilers (dmd and ldc) the dub package manager and many helper utilities.
+
+## Prerequisite
+
+You must have [Vagrant](vagrantup.com) installed in your host system. See installation instructions for more details: [Install Vagrant](https://docs.vagrantup.com/v2/installation/).
 
 
 ## Usage
@@ -52,5 +56,4 @@ To run an interactive session into the built container execute:
 You will be able now to use the latest versions of `dmd`, `ldc2` and `dub`.
 
 Have fun! ;)
-
 
