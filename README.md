@@ -38,7 +38,7 @@ To run an interactive session into the built container execute:
 
     docker run -i -t denv bash
     
-You will be able now to use the latest versions of `dmd`, `ldc` and `dub`.
+You will be able now to use the latest versions of `dmd`, `ldc2` and `dub`.
 
     
 
