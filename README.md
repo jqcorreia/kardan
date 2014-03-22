@@ -26,13 +26,11 @@ You can check if the image was built by asking docker to list all the images:
 
     docker images
     
+As the result you will see the listing of all the locally available images and among them the newly built `denv` image.
+    
     REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
     denv                latest              28449a03cc52        About a minute ago   921.7 MB
-    .
-    .
-    .
-
-As you can see there is an image called `denv`.
+    ...
 
 To run an interactive session into the built container execute:
 
