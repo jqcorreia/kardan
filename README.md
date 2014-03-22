@@ -18,13 +18,28 @@ After loggin in you will see the welcome message from CoreOS. There is only one 
     
     # Create the development image with docker.
     cd ~/share
-    docker build -t denv
+    docker build -t denv .
     
-Now you should see docker trying to obtain the base Ubuntu image. When the download is finished the system will be updated and the development tools will be installed.
+Now you should see docker trying to obtain the base Ubuntu image. When the download is finished the system will be updated and the development tools will be installed in a newly built image.
 
+You can check if the image was built by asking docker to list all the images:
 
+    docker images
+    
+    REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
+    denv                latest              28449a03cc52        About a minute ago   921.7 MB
+    .
+    .
+    .
 
+As you can see there is an image called `denv`.
 
+To run an interactive session into the built container execute:
 
+    docker run -i -t denv bash
+    
+You will be able now to use the latest versions of `dmd`, `ldc` and `dub`.
+
+    
 
 
