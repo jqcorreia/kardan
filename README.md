@@ -10,12 +10,12 @@ Kardan uses the CoreOS platform as the foundation to configure the development e
 Firt of all we need to start the virtual machine with Vagrant.
 
     # Start the virtual machine.
-    vagrant up
+    $ vagrant up
 
 After the machine is up and running it is possible to login.
 
     # Login into the machine.
-    vagrant ssh
+    $ vagrant ssh
 
 Now you will see the welcome message from CoreOS.
 
@@ -28,29 +28,29 @@ Now you will see the welcome message from CoreOS.
     core@localhost ~ $
 
 There is only one directory in your home called `shared`. This directory is shared between the virtual machine and your host OS. The next step is to setup a base containter with the D develompent toolkit.
-    
+
     # Create the development image with docker.
-    cd ~/share
-    docker build -t denv .
+    $ cd ~/share
+    $ docker build -t denv .
     
 Now you should see docker trying to obtain the base Ubuntu image. When the download is finished the system will be updated and the development tools will be installed in a newly built image.
 
 You can check if the image was built by asking docker to list all the images:
 
-    docker images
+    $ docker images
     
 As the result you will see the listing of all the locally available images and among them the newly built `denv` image.
-    
+
     REPOSITORY          TAG                 IMAGE ID            CREATED              VIRTUAL SIZE
     denv                latest              28449a03cc52        About a minute ago   921.7 MB
     ...
 
 To run an interactive session into the built container execute:
 
-    docker run -i -t denv bash
+    $ docker run -i -t denv bash
     
 You will be able now to use the latest versions of `dmd`, `ldc2` and `dub`.
 
-    
+Have fun! ;)
 
 
