@@ -51,7 +51,7 @@ As the result you will see the listing of all the locally available images and a
 
 To run an interactive session into the built container execute:
 
-    $ docker run -i -t denv bash
+    $ docker run -t -i -v ~/share:/share:rw denv bash
     
 You will be able now to use the latest versions of `dmd`, `ldc2` and `dub`.
 
