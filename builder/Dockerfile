@@ -29,6 +29,7 @@ RUN install_dmd.sh
 RUN install_druntime.sh
 RUN install_phobos.sh
 RUN install_ldc2.sh
+RUN install_dub.sh
 
 CMD ["create-sdk-archive.sh"]
 
