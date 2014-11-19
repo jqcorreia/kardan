@@ -6,8 +6,9 @@ help:
 	@echo "Kardan - D SDK Builder"
 	@echo "======================"
 	@echo
-	@echo "    build  -- Build the SDK container."
-	@echo "    export -- Export the SDK archive to the builds directory."
+	@echo "    build         : Build the SDK container."
+	@echo "    export        : Export the SDK archive to the builds directory."
+	@echo "    setup-builder : Installs the post-receive git hook."
 	@echo
 
 setup-builder:
