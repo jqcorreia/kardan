@@ -21,4 +21,3 @@ export:
 	docker run -it -v $(BUILDS_DIR):/builds kardan
 	@echo "Finished exporting the SDK."
 	ls $(BUILDS_DIR)
-	echo
