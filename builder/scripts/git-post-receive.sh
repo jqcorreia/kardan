@@ -3,6 +3,10 @@
 # Git hooks are executed from `.git` directory.
 ROOT=..
 
+# Ensue the dir tree is ok.
+mkdir -p $ROOT/log
+mkdir -p $ROOT/builds
+
 # Redirect std{out,err} to log files.
 exec 1> $ROOT/log/build-`date +%s`-stdout.log
 exec 2> $ROOT/log/build-`date +%s`-stderr.log
