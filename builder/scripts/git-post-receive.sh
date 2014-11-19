@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pwd > /User/rizo/Desktop/xx.log
+pwd >> /User/rizo/Desktop/xx.log
 
 # echo "[`date +"%Y-%m-%d %H:%M:%S"`] Building and exporting the D SDK..."
 # make export
