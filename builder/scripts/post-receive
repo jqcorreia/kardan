@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export ROOT=$GIT_DIR/..
+SCRIPT=$ROOT/builder/scripts/bootstrap-build.sh
+if [ -x "$SCRIPT" ]; then
+	echo "[kardan-builder] -- Will build and export the SDK..."
+    exec $SCRIPT >&- 2>&- & 
+else 
+    echo "[kardan-builder] ** Could not run the build script."
+    echo "[kardan-builder] -- Script file does not exist or is not executable."
+    exit 1
+fi
