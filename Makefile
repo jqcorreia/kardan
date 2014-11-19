@@ -11,10 +11,12 @@ help:
 	@echo
 
 build:
-	docker build -t "kardan" builder
+	echo "Building the kardan image..."
+	docker build -t "kardan" ./builder
 
 export: build
-	@echo "Exporting the builds..."
+	xxxxxxxx
+	echo "Exporting the builds..."
 	mkdir -p $(BUILDS_DIR)
 	docker run -it -v $(BUILDS_DIR):/builds kardan
 
