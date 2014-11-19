@@ -15,11 +15,10 @@ build:
 	docker build -t "kardan" ./builder
 	@echo "Finished building the SDK."
 
-export: build
+export:
 	@echo "Exporting the builds..."
 	@mkdir -p $(BUILDS_DIR)
 	docker run -it -v $(BUILDS_DIR):/builds kardan
 	@echo "Finished exporting the SDK."
 	ls $(BUILDS_DIR)
 	echo
-
