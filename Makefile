@@ -16,7 +16,8 @@ setup-builder:
 
 build:
 	@echo "Building the kardan image..."
-	docker build -t "kardan" ./builder
+	cd builder
+	docker build -t "kardan" .
 	@echo "Finished building the SDK."
 
 export:
