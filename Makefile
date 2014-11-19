@@ -19,5 +19,4 @@ export:
 	@echo "Exporting the builds..."
 	@mkdir -p $(BUILDS_DIR)
 	docker run -it -v $(BUILDS_DIR):/builds kardan
-	@echo "Finished exporting the SDK."
-	ls $(BUILDS_DIR)
+	@echo "Exported SDK to: $(BUILDS_DIR)"
