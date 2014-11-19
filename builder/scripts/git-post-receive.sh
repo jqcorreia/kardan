@@ -1,10 +1,11 @@
 #!/bin/sh
 
-pwd >> /Users/rizo/Desktop/xx.log
+# Git hooks are executed from `.git` directory.
+ROOT=..
 
-# echo "[`date +"%Y-%m-%d %H:%M:%S"`] Building and exporting the D SDK..."
-# make export
-# echo "---\n"
+exec 2>&1
+exec 1>>$ROOT/builds.log
 
-
-# make -C $GIT_DIR/.. export | tee -a $GIT_DIR/../builds.log >&- 2>&- & 
+echo "[`date +"%Y-%m-%d %H:%M:%S"`] Building and exporting the D SDK..."
+make -C $ROOT export
+echo "---\n"
