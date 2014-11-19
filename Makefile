@@ -10,6 +10,9 @@ help:
 	@echo "    export -- Export the SDK archive to the builds directory."
 	@echo
 
+setup-builder:
+	cp builder/scripts/post-receive .git/hooks/
+
 build:
 	@echo "Building the kardan image..."
 	docker build -t "kardan" ./builder
