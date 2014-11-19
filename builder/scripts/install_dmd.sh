@@ -8,7 +8,8 @@ echo "-- Building dmd..."
 make -f posix.mak -j5 MODEL=64
 echo "-- Installing dmd..."
 cp /src/dmd/src/dmd /d/dmd/bin/dmd
-ln -s /d/dmd/bin/dmd /d/bin/dmd
+cd /d/bin
+ln -s /d/dmd/bin/dmd
 echo "Configuring dmd..."
 cat > /etc/dmd.conf << __EOF__
 [Environment]

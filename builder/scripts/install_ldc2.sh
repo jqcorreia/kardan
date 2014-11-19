@@ -12,13 +12,14 @@ mkdir -p /src/ldc/build
 cd /src/ldc/build
 echo "-- Building ldc2..."
 cmake .. \
-    -DCMAKE_INSTALL_PREFIX=/d/ldc \
+    -DCMAKE_INSTALL_PREFIX=/d/ldc2 \
     -DLLVM_ROOT_DIR=/tmp/clang+llvm-3.3-amd64-debian6
 make -j5
 make install
 echo "-- Installing ldc2..."
-ln -s /d/ldc2/bin/ldc2 /d/bin/ldc2
-ln -s /d/ldc2/bin/ldmd2 /d/bin/ldmd2
+cd /d/bin
+ln -s /d/ldc2/bin/ldc2
+ln -s /d/ldc2/bin/ldmd2
 
 
   

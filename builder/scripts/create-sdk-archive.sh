@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/bin/tar cvzf /builds/d-debian-wheezy-x64.tgz /d
+exec /bin/tar cvzf /builds/kardan-1.0-debian-amd64.tgz /d
